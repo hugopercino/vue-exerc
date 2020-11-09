@@ -13,9 +13,10 @@
         <p slot="prod-price" class="price">{{ product.price }}</p>
         <p slot="prod-descrip">{{ product.description }}</p>
       
-        <Button :button="product.onsale" slot="button">
-          <button v-if="!product.onsale">Comprar</button>
-          <button v-if="product.onsale" class="button-sale">Comprar</button>
+        <Button slot="button">
+          <button :class="[
+            product.onsale ? 'sale' : 'initial',
+          ]">Comprar</button>
         </Button>
       </div>
     </Card>
@@ -40,7 +41,6 @@ export default {
   },
   data() {
     return {
-      sale:"button-sale",
       topBorder:"card-border"
     }
   }

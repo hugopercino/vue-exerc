@@ -7,13 +7,7 @@
 <script>
 
 export default {
-    name: 'Button',
-    props: ['button'],
-    data() {
-    return {
-      sale:"button-sale"
-    }
-  }
+    name: 'Button'
 }
 </script>
 
@@ -31,7 +25,7 @@ export default {
         font-size: 18px;
     }
 
-    .button-sale {
+    .sale {
     background: green;
     color: white;
 }
