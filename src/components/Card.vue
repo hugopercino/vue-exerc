@@ -1,41 +1,21 @@
 <template>
   <div class="container">
-    <div
-      class="card"
-      :class="product.onsale ? topBorder : ''"
-      v-for="(product, index) in products"
-      v-bind:key="index"
-    >
-      <h1>{{ product.name }}</h1>
-      <img v-bind:src="product.imageLink" />
-      <p class="price">{{ product.price }}</p>
-      <p>{{ product.description }}</p>
-      <Button>
-        <button :class="product.onsale ? sale : ''">Comprar</button>
-      </Button>
+    
+    <slot name="card">
+      <slot name="prod-name"></slot>
+      <slot name="prod-img"></slot>
+      <slot name="prod-price"></slot>
+      <slot name="prod-descrip"></slot>
+      <slot name="button"></slot>
+    </slot>
       <p>Mais detalhes</p>
-    </div>
   </div>
+  
 </template>
 
 <script>
-import Button from "./Button";
 export default {
-  name: "Card",
-  components: {
-    Button,
-  },
-  computed: {
-    products() {
-      return this.$store.state.products
-    }
-  },
-  data() {
-    return {
-      sale:"button-sale",
-      topBorder:"card-border"
-    }
-  }
+  name: "Card"
 };
 </script>
 
@@ -74,11 +54,6 @@ img {
   font-size: 1rem;
   margin-bottom: 1rem;
   font-family: "Montserrat", Helvetica, sans-serif;
-}
-
-.button-sale {
-    background: green;
-    color: white;
 }
 
 .price {

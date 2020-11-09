@@ -7,7 +7,13 @@
 <script>
 
 export default {
-    name: 'Button'
+    name: 'Button',
+    props: ['button'],
+    data() {
+    return {
+      sale:"button-sale"
+    }
+  }
 }
 </script>
 
@@ -24,4 +30,9 @@ export default {
         width: 80%;
         font-size: 18px;
     }
+
+    .button-sale {
+    background: green;
+    color: white;
+}
 </style>
