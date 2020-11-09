@@ -1,11 +1,13 @@
 <template>
-    <button>Comprar</button>
+    <div>
+        <slot></slot>
+    </div>
 </template>
 
 <script>
 
 export default {
-  name: 'Button'
+    name: 'Button'
 }
 </script>
 
