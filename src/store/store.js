@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     products: [
         {
-          name: "iPhone 11 Max",
+          name: "iPhone x",
           imageLink: require("../assets/iphone.jpg"),
           price: "R$3.000,00",
           description: "Lorem Ipson Lorem Jack",
