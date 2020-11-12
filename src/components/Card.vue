@@ -7,8 +7,8 @@
       <slot name="prod-price"></slot>
       <slot name="prod-descrip"></slot>
       <slot name="button"></slot>
+      <slot name="detalhes">Mais detalhes</slot>
     </slot>
-      <p>Mais detalhes</p>
   </div>
   
 </template>

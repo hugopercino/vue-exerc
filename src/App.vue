@@ -18,6 +18,7 @@
             product.onsale ? 'sale' : 'initial',
           ]">Comprar</button>
         </Button>
+        <p slot="detalhes">Detalhes</p>
       </div>
     </Card>
   </div>
